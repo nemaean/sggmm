@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "sggmm"
+version = "0.1.0"
+description = "Supergiant Games Mod Manager"
+authors = ["Leonard Dallmayr <120810902+nemaean@users.noreply.github.com>"]
+license = "AGPL-3.0-or-later"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+typer = {extras = ["all"], version = "^0.9.0"}
+pydantic = "^2.4.2"
+lark = "^1.1.8"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.11.0"
+interrogate = "^1.5.0"
+isort = "^5.12.0"
+nox = "^2023.4.22"
+pre-commit = "^3.5.0"
+pytest = "^7.4.3"
+pytest-cov = "^4.1.0"
+ruff = "^0.1.5"
+
+[tool.poetry.scripts]
+sggmm = "sggmm.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.interrogate]
+ignore-init-module = true
