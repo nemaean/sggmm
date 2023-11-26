@@ -29,10 +29,10 @@ repos:
       - id: interrogate
         exclude: ^(noxfile.py)
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.1.5
+    rev: v0.1.6
     hooks:
       - id: ruff
-  - repo: https://github.com/PyCQA/prospector
+  - repo: https://github.com/landscapeio/prospector
     rev: v1.10.3
     hooks:
       - id: prospector
