@@ -36,6 +36,8 @@ REGEX_SUBSTITUTION: re.Pattern[str] = re.compile(
 
 
 class GameEnum(StrEnum):
+    """Enum class for games"""
+
     HADES = "Hades"
     PYRE = "Pyre"
     TRANSISTOR = "Transistor"
@@ -57,6 +59,14 @@ class GameEnum(StrEnum):
 
     @staticmethod
     def guess_game(game_path: Path):
+        """Detect game by looking at the provided path
+
+        Args:
+            game_path (Path): Path to the game
+
+        Returns:
+            GameEnum: Specific game, defaulting to Hades
+        """
         match game_path.parent.name:
             case "Hades":
                 return GameEnum.HADES
@@ -187,6 +197,11 @@ def read_modfiles(modfolder_path: Path, game: GameEnum) -> List:
 
 
 def load_mods(modfile_commands: str):
+    """Load modfile commands and execute them
+
+    Args:
+        modfile_commands (str): modfile commands
+    """
     for line in modfile_commands.splitlines():
         command, sub, *priority = line.split()
         match command.lower():
