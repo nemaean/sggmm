@@ -32,7 +32,3 @@ repos:
     rev: v0.1.6
     hooks:
       - id: ruff
-  - repo: https://github.com/landscapeio/prospector
-    rev: v1.10.3
-    hooks:
-      - id: prospector
