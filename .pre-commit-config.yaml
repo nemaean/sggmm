@@ -24,7 +24,7 @@ repos:
     hooks:
       - id: black
   - repo: https://github.com/econchick/interrogate
-    rev: 1.5.0
+    rev: 3aa94a6
     hooks:
       - id: interrogate
         exclude: ^(noxfile.py)
